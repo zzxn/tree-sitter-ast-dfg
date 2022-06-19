@@ -62,7 +62,6 @@ def extract_dataflow(code, lang):
         # print('idx_to_pos', idx_to_pos)
         try:
             DFG,_=parser[1](root_node,index_to_code,{}) 
-            print(DFG)
         except:
             DFG=[]
         DFG=sorted(DFG,key=lambda x:x[1])
