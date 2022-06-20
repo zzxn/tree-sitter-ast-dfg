@@ -22,7 +22,7 @@ And the output should be:
 [({'code': 'c', 'pos': (2, 4)}, 'computedFrom', [{'code': 'a', 'pos': (2, 8)}, {'code': 'b', 'pos': (2, 12)}]), ({'code': 'a', 'pos': (2, 8)}, 'comesFrom', [{'code': 'a', 'pos': (1, 8)}]), ({'code': 'b', 'pos': (2, 12)}, 'comesFrom', [{'code': 'b', 'pos': (1, 11)}]), ({'code': 'c', 'pos': (3, 11)}, 'comesFrom', [{'code': 'c', 'pos': (2, 4)}])]
 ```
 
-The `flows` follow the format of `List[Tuple[Token, 'comesFrom'|'computedFrom', Token]]`,
+The `flows` follow the format of `List[Tuple[Token, 'comesFrom'|'computedFrom', List[Token]]]`,
 where `Token` is a dict like this:
 ```python
 {
