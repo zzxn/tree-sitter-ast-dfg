@@ -1,3 +1,4 @@
+import os
 from .parser import DFG_go, DFG_java, DFG_javascript, DFG_php, DFG_python, DFG_ruby
 from .parser import (
     index_to_code_token,
@@ -18,6 +19,7 @@ dfg_function={
 #load parsers
 parsers={}        
 for lang in dfg_function:
+    dirname = os.path.dirname(__file__)
     LANGUAGE = Language('parser/my-languages.so', lang)
     parser = Parser()
     parser.set_language(LANGUAGE) 
